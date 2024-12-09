@@ -7,6 +7,8 @@
  
 **NOTE: This project is a prototype foe fhe future possiblites of decentralized insurance** 
 
+devnet:(https://explorer.solana.com/address/9rgwCLaTUbT79wiXQ4dgqrKKnPD31tLQHw3oUqMUnovP?cluster=devnet)
+
 ---
 
 ## Features
