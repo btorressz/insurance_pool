@@ -50,5 +50,116 @@ Tracks the details of an insurance policy:
 
 ---
 
+# Instructions
+
+## 1. Initialize Pool
+
+**initialize_pool**
+
+- Initializes the insurance reserve pool.
+- Sets the governance authority.
+- Establishes initial values for reserves and counters.
+
+---
+
+## 2. Purchase Insurance
+
+**purchase_insurance**
+
+- Allows users to purchase a new insurance policy.
+- Calculates premiums based on various parameters, including risk level and coverage type.
+- Allocates premiums to the respective risk reserve pool.
+- Tracks referral bonuses for incentivizing onboarding.
+
+---
+
+## 3. Renew Policy
+
+**renew_policy**
+
+- Enables users to renew an existing policy.
+- Applies a discount to the premium during renewal.
+- Extends the policy's expiration time by a specified duration.
+
+---
+
+## 4. Rebalance Reserves
+
+**rebalance_reserves**
+
+- Rebalances funds across different risk pools to ensure stability.
+- Redistributes excess funds from low-risk reserves to medium and high-risk pools.
+
+---
+
+## Enumerations
+
+### Policy Types
+
+**PolicyType**
+- Flight Delay
+- Crop Failure
+- Property Damage
+
+### Coverage Levels
+
+**CoverageLevel**
+- Basic
+- Premium
+- Platinum
+
+### Risk Levels
+
+**RiskLevel**
+- Low
+- Medium
+- High
+
+---
+
+## Events
+
+**PolicyPurchased**
+
+- Records details of purchased policies.
+- Logs the policyholder, premium amount, and policy type.
+
+---
+
+## Error Codes
+
+**MyError**
+- InvalidEvent: Oracle data is invalid.
+- InsufficientFunds: Reserve pool lacks sufficient funds.
+- Unauthorized: User lacks required permissions.
+- OperationPaused: Operations are paused.
+- PolicyNotRenewable: Policy cannot be renewed at this time.
+
+---
+
+## Technical Highlights
+
+### Premium Calculation
+
+**calculate_premium_with_coverage**
+
+- Premiums are adjusted based on policy type, coverage level, and total policies.
+- Early-bird discounts are applied for pools with fewer than 100 policies.
+
+### Reserve Rebalancing
+
+**rebalance_reserves**
+
+- Ensures balanced allocation of funds to minimize risks.
+- Dynamically shifts excess funds to stabilize the pool.
+
+---
+
+## Future Enhancements
+
+- Expanding support for additional policy types.
+- Introducing dynamic pricing models through external data oracles.
+- Providing staking rewards for reserve pool contributions.
+
 
 
