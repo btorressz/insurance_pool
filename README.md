@@ -137,7 +137,7 @@ Tracks the details of an insurance policy:
 
 ---
 
-## Technical Highlights
+##  Workflows
 
 ### Premium Calculation
 
